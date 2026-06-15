@@ -1,0 +1,4 @@
+function toggleNav(){var n=document.querySelector('.main-nav');n.classList.toggle('open')}
+function openLightbox(el){var lb=document.getElementById('lightbox');var img=document.getElementById('lightbox-img');if(!lb||!img||!el)return;img.src=el.src;img.alt=el.alt;lb.classList.add('open');lb.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+function closeLightbox(){var lb=document.getElementById('lightbox');var img=document.getElementById('lightbox-img');if(!lb)return;lb.classList.remove('open');lb.setAttribute('aria-hidden','true');if(img)img.src='';document.body.style.overflow=''}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox()})
